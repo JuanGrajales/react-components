@@ -4,14 +4,10 @@ import React from "react";
 
 class IdCard extends React.Component {  
   render() {
-
-
-
-    // add any class that was declared outside of the className label
-    for(const key in this.props) {
-      console.log(`Label: ${key} Data: ${this.props[key]}`)
-    }
-
+    // how to reference each label and the info inside the label
+    // for(const key in this.props) {
+    //   console.log(`Label: ${key} Data: ${this.props[key]}`)
+    // }
     return (
       <div>
         <img src={this.props.picture} alt={this.props.firstName} />
