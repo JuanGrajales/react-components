@@ -1,4 +1,3 @@
-
 import "./id-card.css"
 import React from "react";
 // ^ this is always needed for any react components
