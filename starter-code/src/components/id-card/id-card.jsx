@@ -2,19 +2,24 @@
 import React from "react";
 // ^ this is always needed for any react components
 
-class IdCard extends React.Component {
-  
+class IdCard extends React.Component {  
   render() {
+
+
+
+    // add any class that was declared outside of the className label
+    for(const key in this.props) {
+      console.log(`Label: ${key} Data: ${this.props[key]}`)
+    }
+
     return (
       <div>
-        {this.props.firstName}
-        {/* <img src={this.props.picture} alt={this.props.firstName} />
-        <div>{this.props.firstName}</div>
-        <div>{this.props.lastName}</div>
-        <div>{this.props.gender}</div>
-        <div>{this.props.height}</div>
-        <div>{this.props.birth}</div> */}
-        
+        <img src={this.props.picture} alt={this.props.firstName} />
+        <div>First Name: {this.props.firstName}</div>
+        <div>Last Name: {this.props.lastName}</div>
+        <div>Gender: {this.props.gender}</div>
+        <div>Height: {this.props.height}</div>
+        <div>Birth: {this.props.birth.toDateString()}</div> 
       </div>
     );
   }
